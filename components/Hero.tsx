@@ -5,9 +5,6 @@ export default function Hero() {
       <h1 className="mx-auto max-w-3xl text-[2rem] font-extrabold leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
         Is Your 5-Litre Oxygen Concentrator <span className="text-primary">Really Working Properly?</span>
       </h1>
-      <p className="mx-auto mt-5 max-w-xl text-lg font-medium text-ink sm:text-xl">
-        Book a free one-to-one call. Tell us your machine&apos;s symptoms. We&apos;ll tell you honestly if it needs service.
-      </p>
       <div className="mx-auto mt-5 max-w-md space-y-1 text-base text-muted">
         <p>Your machine turns on. But is it still giving the right oxygen?</p>
         <p>This free call is for families who use a 5-litre oxygen concentrator at home.</p>
