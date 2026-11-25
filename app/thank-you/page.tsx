@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import { SITE, vimeoEmbedUrl } from "@/lib/config";
+import { SITE } from "@/lib/config";
 
 export const metadata: Metadata = { title: "Thank You", robots: { index: false, follow: false } };
 
 export default function ThankYou() {
-  const video = SITE.vimeoUrl ? vimeoEmbedUrl(SITE.vimeoUrl) : null;
   const wa = SITE.whatsapp ? `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(SITE.whatsappMessage)}` : null;
 
   return (
@@ -21,19 +20,10 @@ export default function ThankYou() {
         </p>
 
         <h2 className="mt-10 text-2xl font-bold text-primary sm:text-3xl">Watch this video</h2>
-        {video ? (
-          <div className="mt-5 aspect-video w-full overflow-hidden rounded-3xl shadow-soft">
-            <iframe src={video} title="Oxygen concentrator service video" className="h-full w-full" allow="fullscreen; picture-in-picture" allowFullScreen loading="lazy" />
-          </div>
-        ) : (
-          <div className="mt-5 flex aspect-video w-full flex-col items-center justify-center rounded-3xl bg-slate-200 px-6 text-slate-600">
-            <svg aria-hidden="true" viewBox="0 0 64 64" className="mb-4 h-16 w-16" fill="none">
-              <circle cx="32" cy="32" r="29" stroke="currentColor" strokeWidth="2" />
-              <path d="M26 21L44 32L26 43V21Z" fill="currentColor" />
-            </svg>
-            <p className="text-lg font-semibold">Vimeo video coming soon</p>
-          </div>
-        )}
+        <video className="mt-5 w-full rounded-3xl bg-black shadow-soft" controls playsInline preload="metadata">
+          <source src="/thank-you-video.mp4" type="video/mp4" />
+          Your browser does not support video playback.
+        </video>
 
         {wa ? (
           <a href={wa} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[#25D366] px-8 py-4 text-base font-semibold text-white shadow-soft transition hover:bg-[#1ebe5b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366] sm:w-auto">
