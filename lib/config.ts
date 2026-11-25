@@ -2,7 +2,7 @@ export const SITE = {
   name: "Multi Equipment Trade and Services P. Ltd.",
   title: "Free 5-Litre Oxygen Concentrator Consultation",
   description:
-    "Book a free one-to-one call about your 5-litre oxygen concentrator. Tell us the symptoms. We'll tell you honestly if it needs service.",
+    "Request a free consultation for your 5-litre oxygen concentrator and discuss any service concerns.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   whatsapp: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "9779841449957").replace(/\D/g, ""),
   vimeoUrl: process.env.NEXT_PUBLIC_VIMEO_URL ?? "https://vimeo.com/76979871",
