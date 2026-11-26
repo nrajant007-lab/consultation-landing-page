@@ -21,3 +21,17 @@ body { @apply bg-white text-ink antialiased; overflow-x: hidden; }
   html { scroll-behavior: auto; }
   * { animation: none !important; transition: none !important; }
 }
+/* Keep the embedded Flodesk form consistent with the consultation page. */
+.flodesk-form [data-ff-el="config"],
+.flodesk-form [data-ff-el="success"],
+.flodesk-form [class$="__title"],
+.flodesk-form [class$="__subtitle"],
+.flodesk-form [class$="__preference-title"] { display: none; }
+.flodesk-form [data-ff-stage="success"] [data-ff-el="success"] { display: block; }
+.flodesk-form [data-ff-stage="success"] [data-ff-el="content"] { display: none; }
+.flodesk-form .fd-form-group { display: flex; flex-direction: column-reverse; margin-bottom: 1.25rem; }
+.flodesk-form .fd-form-label { margin-bottom: .375rem; font-size: .875rem; font-weight: 600; }
+.flodesk-form .fd-form-control { width: 100%; border: 1px solid #cbd5e1; border-radius: .75rem; padding: .875rem 1rem; }
+.flodesk-form .fd-form-check { display: flex; gap: .5rem; align-items: center; margin-bottom: 1rem; }
+.flodesk-form .fd-btn { width: 100%; border-radius: 9999px; background: #253088; color: white; font-weight: 600; padding: 1rem; }
+.flodesk-form .fd-form-error, .flodesk-form .fd-form-feedback { color: #b91c1c; }
